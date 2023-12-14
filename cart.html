@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/js_94_project-caramel/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Food Boutique</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    
+    
+    <script type="module" crossorigin src="/js_94_project-caramel/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_94_project-caramel/assets/vendor-081dd1c4.js">
+    <link rel="modulepreload" crossorigin href="/js_94_project-caramel/assets/footer-1599085c.js">
+    <link rel="stylesheet" href="/js_94_project-caramel/assets/footer-d9d046af.css">
+    <link rel="stylesheet" href="/js_94_project-caramel/assets/cart-152a75f2.css">
+  </head>
+  <body>
+    <header class="container">
+  <div class="header-container">
+    <div class="box-hover">
+      <a class="header-logo  link" href="./index.html">
+        <div class="header__shop-icon-container ">
+          <svg class="cart-shop-icon" width="16" height="16">
+            <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-tdesign_cabbage-1"></use>
+          </svg>
+        </div>
+        Food Boutique
+      </a>
+    </div>
+    <nav>
+      <ul class="header-navigation">
+        <li><a class="header-home link" href="./index.html"><span >Home</span></a></li>
+        <li>
+          <a id="cartLink" class="header-cart link" href="./cart.html">
+            <div class="header__icon-container">
+              <svg class="cart-icon" width="16" height="16">
+                <use
+                  href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-heroicons-solid_shopping-cart"
+                ></use>
+              </svg>
+            </div>
+            <span id="countProducts">Cart(0)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main>
+      <section class="container">
+  <h1 class="visually-hidden">Shopping Cart</h1>
+  <div class="title-container">
+    <div class="basket-border">
+      <svg class="basket-icon" width="18" height="18">
+        <use
+          class="js-basket-icon"
+          href="/js_94_project-caramel/assets/icons-89cc0206.svg#shopping-cart"
+        ></use>
+      </svg>
+    </div>
+    <h2 class="title-cart">Cart (<span class="js-item-count">0</span>)</h2>
+  </div>
+  <div class="empty-basket-container js-empty-basket hide">
+    <img
+      class="empty-basket-img"
+      src="/js_94_project-caramel/assets/empty_yellow_shopping_basket-84a167bd.png"
+      alt="Empty yellow shopping basket"
+    />
+    <div class="basket-text-container">
+      <p class="basket-text-bold">
+        Your basket is <span class="color">empty...</span>
+      </p>
+      <p class="basket-text">
+        Go to the main page to select your favorite products and add them to the
+        cart.
+      </p>
+    </div>
+  </div>
+  <div class="basket-container js-filled-basket">
+    <div class="basket-item-container js-item-button">
+      <button class="basket-clear-container" type="button" aria-label="Delete all">
+        Delete all
+        <svg class="delete-icon" width="24" height="24">
+          <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#delete-icon"></use>
+        </svg>
+      </button>
+      <ul class="items-block-container js-items-container"></ul>
+    </div>
+    <div class="basket-total-container">
+      <h3 class="total-title">Your Order</h3>
+      <ul class="total-count-container">
+        <li class="total-main-text">Total</li>
+        <li>
+          <span class="total-small-text">Sum:</span>
+          <span class="total-count-text">$0</span>
+        </li>
+      </ul>
+      <form class="checkout-form js-checkout-form">
+        <label class="email-label" for="email">
+          Mail
+          <input
+            class="email-input"
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </label>
+        <button class="checkout-button" data-js-modal-open type="submit" aria-label="Submit">Checkout</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-window">
+      <button class="modal-close-button" type="button" aria-label="close" data-modal-close>
+        <svg class="close-icon" width="28" height="28">
+          <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#delete-icon"></use>
+        </svg>
+      </button>
+      <div id="js-modal-info" class="modal-info"></div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="conteiner-div">
+      <div class="footer-media">
+        <a href="./index.html" class="footer-socials-link" target="_blank" rel="nofollow" aria-label="Food Boutique">
+          <div class="food-boutique-container">
+            <svg class="food-boutique" width="16" height="16">
+              <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#food-boutique"></use>
+            </svg>
+          </div>
+          <p class="footer-socials-text">Food Boutique</p>
+        </a>
+        <ul class="footer-social-list">
+          <li class="footer-socials-item">
+            <a href="https://www.facebook.com/goITclub/" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our Facebook page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="https://www.instagram.com/goitclub/" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our Instagram page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="https://www.youtube.com/c/GoIT" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our YouTube page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-form-text">
+        <div class="footer-div-text">
+          <p class="footer-p-h">Discover the Variety of Flavors and Quality</p>
+          <p class="footer-p-text">
+            An online store where you will find fresh, natural and delicious
+            products for a healthy life and unforgettable gastronomic
+            adventures.
+          </p>
+        </div>
+        <div class="feedback-form-background">
+          <p class="form-p">Subscribe and learn about new products!</p>
+          <form class="feedback-form">
+            <label for="email">
+              <input class="footer-input" type="email" id="email" name="email" placeholder="Email" />
+            </label>
+            <button id="footer-button" class="footer-button" type="submit" aria-label="email submit" data-menu-open>
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-div">
+      <p class="footer-p">Food Boutique. All rights reserved</p>
+      <p class="footer-p ppts">Privacy Policy / Terms of Service</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<div class="mob-menu menu-active is-hidden" data-menu>
+  <!-- перша меню -->
+  <div class="mob-container is-hidden" data-one>
+    <button class="header-button-close" type="button" aria-label="menu-close">
+      <svg class="header-close-icon" width="32" height="32" data-menu-close>
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal-div">
+      <p class="modal-h-p">
+        Thanks for subscribing for <span class="span-modal">new</span> products
+      </p>
+      <p class="modal-p-p">
+        We promise you organic and high-quality products that will meet your
+        expectations. Please stay with us and we promise you many pleasant
+        surprises.
+      </p>
+    </div>
+  </div>
+  <!-- друга меню -->
+  <div class="mob-container-two is-hidden" data-two>
+    <button class="header-button-close" type="button" aria-label="menu-close">
+      <svg class="header-close-icon" width="32" height="32" data-menu-close>
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal-div">
+      <p class="modal-h-p">
+        This <span class="span-modal">email address</span> has already been
+        entered
+      </p>
+      <p class="modal-p-p">
+        You have already subscribed to our new products. Watch for offers at the
+        mailing address.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    
+    
+  </body>
+</html>

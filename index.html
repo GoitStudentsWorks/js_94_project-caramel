@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Food Boutique">
+  <link rel="icon" type="image/svg+xml" href="/js_94_project-caramel/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Boutique</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
+  
+  <script type="module" crossorigin src="/js_94_project-caramel/commonHelpers2.js"></script>
+  <link rel="modulepreload" crossorigin href="/js_94_project-caramel/assets/vendor-081dd1c4.js">
+  <link rel="modulepreload" crossorigin href="/js_94_project-caramel/assets/footer-1599085c.js">
+  <link rel="stylesheet" href="/js_94_project-caramel/assets/footer-d9d046af.css">
+</head>
+
+<body>
+  <header class="container">
+  <div class="header-container">
+    <div class="box-hover">
+      <a class="header-logo  link" href="./index.html">
+        <div class="header__shop-icon-container ">
+          <svg class="cart-shop-icon" width="16" height="16">
+            <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-tdesign_cabbage-1"></use>
+          </svg>
+        </div>
+        Food Boutique
+      </a>
+    </div>
+    <nav>
+      <ul class="header-navigation">
+        <li><a class="header-home link" href="./index.html"><span >Home</span></a></li>
+        <li>
+          <a id="cartLink" class="header-cart link" href="./cart.html">
+            <div class="header__icon-container">
+              <svg class="cart-icon" width="16" height="16">
+                <use
+                  href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-heroicons-solid_shopping-cart"
+                ></use>
+              </svg>
+            </div>
+            <span id="countProducts">Cart(0)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll up">
+    <svg class="arrow-up" height="40" width="40">
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#arrow-up"></use>
+    </svg>
+</button>
+    <section class="hero">
+  <div class="container hero-container">
+    <div class="hero-title">
+      <h1 class="hero-title__text">
+        Welcome to the <span>Food</span> Boutique!
+      </h1>
+      <p class="hero-subtitle">
+        With Food Boutique, you're not just subscribing to food, you're signing
+        up for a fresher, fitter, and happier you.
+      </p>
+    </div>
+    <div class="hero-background">
+      <svg>
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-organic-food"></use>
+      </svg>
+    </div>
+  </div>
+</section>
+
+    <section class="filters-section container">
+  <h2 class="visually-hidden">Filters</h2>
+  <div class="filter-container">
+    <h3 class="filter-title">Filters:</h3>
+    <div class="filter">
+      <form class="filter-form" id="filter-form">
+        <div class="filter-input-container">
+          <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search for anything"
+          />
+
+          <button type="submit" class="search-btn" aria-label="Search">
+            <svg class="filter-icon-search" width="20" height="20">
+              <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="filter-select-container">
+        <select class="filter-select" name="categories">
+          <option value="select" label="Categories" disabled selected hidden>
+            Categories
+          </option>
+        </select>
+
+        <svg class="filter-icon-select" width="20" height="20">
+          <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-down"></use>
+        </svg>
+      </div>
+
+      <div class="filter-sort-container">
+        <select class="filter-sort" name="sort">
+          <option value="sort" label="A to Z"></option>
+        </select>
+
+        <svg class="filter-icon-sort" width="20" height="20">
+          <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#icon-down"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="main-container">
+      <div>
+        <section class="products-container">
+  <h2 class="visually-hidden">Products</h2>
+  <div class="list-prod-container">
+    <ul class="list-prod"></ul>
+  </div>
+  <div class="filter-nomatches-container visually-hidden">
+    <div class="nomatches-text-container">
+      <p class="nomatches-text-bold">
+        Nothing was found for the selected
+        <span class="for-color">filters...</span>
+      </p>
+      <p class="nomatches-text">
+        Try adjusting your search parameters or browse our range by other
+        criteria to find the perfect product for you.
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section class="pagination-container">
+    <h2 class="visually-hidden">Navigation</h2>
+    <div id="pagination" class="tui-pagination"></div>
+</section>
+      </div>
+      <div class="main-sidebar">
+        <section class="section-popular-product">
+  <div class="popular-container">
+    <h2 class="section-title">Popular products</h2>
+    <ul class="popular-product-list"></ul>
+  </div>
+</section>
+
+        <section class="products">
+    <h2>Discount products</h2>
+    <div class="products-discount"></div>
+</section>
+      </div>
+    </div>
+    <div class="modal-overlay">
+  <div id="modalProduct" class="modal">
+    <span class="close" id="closeModalProductBtn">&times;</span>
+    <div class="product-info">
+      <div class="pro">
+        <div class="product-image">
+          <img id="modalProductImage" src="#" alt="Product Image" />
+        </div>
+        <div class="product-details">
+          <h2 id="modalProductName">modalProductName</h2>
+          <div class="product-bloc">
+            <p id="modalProductCategory"></p>
+            <p id="modalProductSize"></p>
+            <p id="modalProductPopularity"></p>
+          </div>
+          <p id="modalProductDescription"></p>
+        </div>
+      </div>
+      <div class="product-add">
+        <p id="modalProductPrice"></p>
+        <button id="addToCartBtn" class="buy-btn" type="button" aria-label="Buy">
+          Add to
+          <svg class="buy-svg" id="addToCartIcon" width="18" height="18">
+            <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#shopping-cart"></use>
+          </svg>
+        </button>
+        <button id="removeFrom" class="buy-btn visually-hidden" type="button" aria-label="Don't Buy">
+          Remove
+          <svg class="buy-svg" id="removeFromIcon" width="18" height="18">
+            <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#shopping-cart"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="conteiner-div">
+      <div class="footer-media">
+        <a href="./index.html" class="footer-socials-link" target="_blank" rel="nofollow" aria-label="Food Boutique">
+          <div class="food-boutique-container">
+            <svg class="food-boutique" width="16" height="16">
+              <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#food-boutique"></use>
+            </svg>
+          </div>
+          <p class="footer-socials-text">Food Boutique</p>
+        </a>
+        <ul class="footer-social-list">
+          <li class="footer-socials-item">
+            <a href="https://www.facebook.com/goITclub/" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our Facebook page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="https://www.instagram.com/goitclub/" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our Instagram page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-socials-item">
+            <a href="https://www.youtube.com/c/GoIT" class="footer-socials-link" target="_blank" rel="nofollow"
+              aria-label="Our YouTube page">
+              <svg class="footer-socials-icon" width="28" height="28">
+                <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-form-text">
+        <div class="footer-div-text">
+          <p class="footer-p-h">Discover the Variety of Flavors and Quality</p>
+          <p class="footer-p-text">
+            An online store where you will find fresh, natural and delicious
+            products for a healthy life and unforgettable gastronomic
+            adventures.
+          </p>
+        </div>
+        <div class="feedback-form-background">
+          <p class="form-p">Subscribe and learn about new products!</p>
+          <form class="feedback-form">
+            <label for="email">
+              <input class="footer-input" type="email" id="email" name="email" placeholder="Email" />
+            </label>
+            <button id="footer-button" class="footer-button" type="submit" aria-label="email submit" data-menu-open>
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-div">
+      <p class="footer-p">Food Boutique. All rights reserved</p>
+      <p class="footer-p ppts">Privacy Policy / Terms of Service</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<div class="mob-menu menu-active is-hidden" data-menu>
+  <!-- перша меню -->
+  <div class="mob-container is-hidden" data-one>
+    <button class="header-button-close" type="button" aria-label="menu-close">
+      <svg class="header-close-icon" width="32" height="32" data-menu-close>
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal-div">
+      <p class="modal-h-p">
+        Thanks for subscribing for <span class="span-modal">new</span> products
+      </p>
+      <p class="modal-p-p">
+        We promise you organic and high-quality products that will meet your
+        expectations. Please stay with us and we promise you many pleasant
+        surprises.
+      </p>
+    </div>
+  </div>
+  <!-- друга меню -->
+  <div class="mob-container-two is-hidden" data-two>
+    <button class="header-button-close" type="button" aria-label="menu-close">
+      <svg class="header-close-icon" width="32" height="32" data-menu-close>
+        <use href="/js_94_project-caramel/assets/icons-89cc0206.svg#close"></use>
+      </svg>
+    </button>
+    <div class="modal-div">
+      <p class="modal-h-p">
+        This <span class="span-modal">email address</span> has already been
+        entered
+      </p>
+      <p class="modal-p-p">
+        You have already subscribed to our new products. Watch for offers at the
+        mailing address.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  
+</body>
+
+</html>
