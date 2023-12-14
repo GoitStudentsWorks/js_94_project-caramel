@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-caramel/",
+    "build": "vite build --base=/js_94_project-caramel/",
     "preview": "vite preview"
   },
   "devDependencies": {
